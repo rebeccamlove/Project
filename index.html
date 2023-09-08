@@ -402,38 +402,57 @@ body {
       </div>
     </nav>
 
-    <section class="home">
-    </section>
-    <div style="height: 1000px">
-      <!-- just to make scrolling effect possible -->
-      <h2 class="myH2" id="rebecca-love">Rebecca Love</h2>
-      <p class="myP">I'm taking a full stack engineer course at CodeAcademy.com.</p>
-      <p class="myP">I've completed my Master's Degree in Industrial and Organizational Psychology.</p>
-      <p class="myP">I'm also a seasoned fundraiser, program and operations manager nonprofit organizations.</p>
+<section class="home">
+</section>
+<nav class="nav">
+  <div class="container">
+    <div class="logo">
+      <a href="Assets/RL.jpeg">
+        <img src="image.jpg" alt="Logo">
+      </a>
     </div>
+    <div id="mainListDiv" class="main_list">
+      <ul class="navlinks">
+        <li><a href="#rebecca-love">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li>
+          <a href="#">Contact</a>
+          <!-- Contact Information -->
+          <ul class="sub-menu">
+            <li><a href="tel:+1234567890">Phone: +1 (123) 456-7891</a></li>
+            <li><a href="mailto:contact@example.com">Email: contact@example.com</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <span class="navTrigger">
+      <i></i>
+      <i></i>
+      <i></i>
+    </span>
+  </div>
+</nav>
 
-    <!-- Jquery needed -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/scripts.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/scripts.js"></script>
 
-    <!-- Function used to shrink nav bar removing paddings and adding black background -->
-    <script>
-      $(window).scroll(function() {
-        if ($(document).scrollTop() > 50) {
-          $('.nav').addClass('affix');
-          console.log("OK");
-        } else {
-          $('.nav').removeClass('affix');
-        }
-      });
+<script>
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 50) {
+      $('.nav').addClass('affix');
+      console.log("OK");
+    } else {
+      $('.nav').removeClass('affix');
+    }
+  });
 
-      // Additional JS for toggling the menu
-      $('.navTrigger').click(function() {
-        $(this).toggleClass('active');
-        console.log("Clicked menu");
-        $("#mainListDiv").toggleClass("show_list");
-        $("#mainListDiv").fadeIn();
-      });
-    </script>
+  // Additional JS for toggling the menu
+  $('.navTrigger').click(function() {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn();
+  });
+</script>
   </body>
 </html>
